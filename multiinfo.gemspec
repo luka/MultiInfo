@@ -5,7 +5,7 @@ $gemspec = Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   
   s.name                = %q{multiinfo}
-  s.version             = Multiinfo::VERSION.to_s
+  s.version             = MultiInfo::VERSION.to_s
   s.summary             = "Ruby interface to the Polkomtel's MultiInfo SMS gateway service, based on Luke Redpath's clickatel library"
   s.author              = "Łukasz Łuczak"
   s.email               = "luka@weblify.pl"
