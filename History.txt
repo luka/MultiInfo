@@ -1,0 +1,6 @@
+2009-07-29 Version 0.0.1 
+  - sending sms message
+  - receiving smsm message status
+  - cancel sending sms
+  - config enabled with yml file
+  - HTTPclient used for HTTPS with client cert comunication
