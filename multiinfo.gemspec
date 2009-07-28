@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{multiinfo}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["\305\201ukasz \305\201uczak"]
@@ -10,14 +10,13 @@ Gem::Specification.new do |s|
   s.description = %q{This gem is Ruby interface to the Polkomtel's MultiInfo SMS gateway service, based on Luke Redpath's clickatel library. To use this gem, you will need an access to Polkomtel's MultiInfo service. You need user, password, sercvice_id and certificate for ssl connection. Contact Polkomtel sales reps for info how to obtain acces to MultiInfo service.}
   s.email = %q{luka@weblify.pl}
   s.extra_rdoc_files = [
-    "README.txt"
+    "README.rdoc"
   ]
   s.files = [
     ".gitignore",
      "History.txt",
      "License.txt",
-     "RDOC_README.txt",
-     "README.txt",
+     "README.rdoc",
      "VERSION",
      "config_example.yml",
      "lib/core-ext/hash.rb",
@@ -28,7 +27,6 @@ Gem::Specification.new do |s|
      "lib/multiinfo/api/error.rb",
      "lib/multiinfo/api/executor.rb",
      "lib/multiinfo/api/response.rb",
-     "lib/multiinfo/version.rb",
      "multiinfo.gemspec",
      "rakefile.rb"
   ]
