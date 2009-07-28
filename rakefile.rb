@@ -11,7 +11,8 @@ begin
     Contact Polkomtel sales reps for info how to obtain acces to MultiInfo service."
     gemspec.email = "luka@weblify.pl"
     gemspec.homepage = "http://github.com/luka/multiinfo"
-    gemspec.authors = ["Josh Nichols"]    
+    gemspec.authors = ["Łukasz Łuczak"]    
+    gemspec.add_dependency('httpclient', '>= 2.0.0')    
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
