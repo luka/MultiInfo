@@ -58,7 +58,6 @@ module MultiInfo
           ]
         }
         
-      
       end
 
     end
