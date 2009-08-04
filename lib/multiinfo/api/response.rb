@@ -9,12 +9,12 @@ module MultiInfo
         def parse(response_arr)
           return { :status => 'OK' } if API.test_mode
           command, http_response = response_arr
-          response_rows = http_response.split("\r\n")
+          response_rows = http_response.split("\n")
           response_status, response_body = response_rows[0], response_rows[1..-1]
           if response_status.to_i < 0 
             raise MultiInfo::API::Error.new(response_status, response_body.first)
           else
-            response_hash(command, response_body).merge({:status => response_status})
+            response_hash(command, response_body).merge({:status => response_status.chop})
           end
         end
         
