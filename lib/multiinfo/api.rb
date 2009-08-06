@@ -45,12 +45,26 @@ module MultiInfo
       parse_response(response)
     end
 
+
+    # Sends a package of messages. Recipient
+    # number should have an international dialing prefix 
+    def send_package
+      # todo
+    end
+      
     
     # Returns the status of a message. Use sms ID returned
     # from original send_message call.
     def message_info(sms_id)
       response = execute_command('infosms',  :sms_id => sms_id)
       parse_response(response)
+    end
+
+    # Returns the status of a package of messages. Use package id returned
+    # from original send_package call.
+    def package_info(package_id)
+      response = execute_command('packageinfo',  :package_id => package_id)
+      parse_response(response)      
     end
 
     # Returns the status of a message. Use sms ID returned
@@ -60,6 +74,11 @@ module MultiInfo
       parse_response(response)
     end
     
+    def get_message(opts={})
+      valid_options = opts.only(:timeout).merge(service_id)
+      response = execute_command('getsms', valid_options)
+      parse_response(response)
+    end
     
     def sms_requests #:nodoc:
       @sms_requests ||= []
