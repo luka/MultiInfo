@@ -45,7 +45,8 @@ module MultiInfo
           sms_requests << uri
           FakeHttpResponse.new
         else
-          clnt = HTTPClient.new          
+          clnt = HTTPClient.new
+          clnt.ssl_config.set_default_paths
           clnt.ssl_config.set_client_cert_file(@client_cert_file[:cert], @client_cert_file[:rsa_key])
           clnt.get_content(uri)    
         end
