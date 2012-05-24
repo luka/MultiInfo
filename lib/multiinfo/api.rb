@@ -103,7 +103,7 @@ module MultiInfo
       end
     
       def certificate #:nodoc:
-        @certificate ||= @auth_options.only(:client_cert, :client_key)        
+        @certificate ||= @auth_options.only(:client_cert, :client_key, :ca_path)
       end
     
       def service_id #:nodoc:

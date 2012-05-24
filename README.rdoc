@@ -24,6 +24,7 @@ Default path for config file and certificate files is $HOME/multiinfo. You shoul
   multiinfo.yml # config file
   multiinfo.crt # certificate
   multiinfo.pem # RSA key
+
     
 In multiinfo.yml you should specify at least:
   login
@@ -34,6 +35,9 @@ If you want to use different names for certificate files speciify them with FULL
   
   client_cert
   client_key
+
+You will probably also need to add Multiinfo Root Certificate to your trusted certificates chain.
+To mark a certificate as trusted, specify it in your multiinfo.yml file (you can provide either a filename or a directory). You can also use 'default' to let the application use the default certificates path.
 
 See example in config_example.yml
 

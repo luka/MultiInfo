@@ -6,3 +6,4 @@ service_id: 1
 # Optionally you can specify full path to certificate files
 client_cert: /home/luka/weblify.cert
 client_key: /home/luka/weblify.key
+ca_path: /etc/ssl/certs #or just user default
