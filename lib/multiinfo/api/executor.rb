@@ -18,6 +18,7 @@ module MultiInfo
           :cert => certificate_hash[:client_cert] || File.join(DEFAULT_CONFIG_PATH, DEFAULT_CERT_FILE),
           :rsa_key  => certificate_hash[:client_key] || File.join(DEFAULT_CONFIG_PATH, DEFAULT_KEY_FILE)
         }
+        @client_cert_file[:ca_path] = certificate_hash[:ca_path] unless certificate_hash[:ca_path].blank?
         @debug = debug
         @test_mode = test_mode
       
@@ -46,7 +47,11 @@ module MultiInfo
           FakeHttpResponse.new
         else
           clnt = HTTPClient.new
-          clnt.ssl_config.set_default_paths
+          if @client_cert_file[:ca_path] == 'default'
+            clnt.ssl_config.set_default_paths
+          elsif !@client_cert_file[:ca_path].blank?
+            clnt.ssl_config.add_trust_ca @client_cert_file[:ca_path]
+          end
           clnt.ssl_config.set_client_cert_file(@client_cert_file[:cert], @client_cert_file[:rsa_key])
           clnt.get_content(uri)    
         end
