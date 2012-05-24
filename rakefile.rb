@@ -10,7 +10,7 @@ begin
     gemspec.email = "luka@weblify.pl"
     gemspec.homepage = "http://github.com/luka/multiinfo"
     gemspec.authors = ["Łukasz Łuczak"]    
-    gemspec.add_dependency('httpclient', '>= 2.0.0')    
+    gemspec.add_dependency('httpclient', '>= 2.2.5')    
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"

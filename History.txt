@@ -1,4 +1,7 @@
-2009-07-29 Version 0.0.1 
+2012-05-24 Version 0.0.7 Piotr Barczuk
+  - added support for trusted certificates signing
+
+2009-07-29 Version 0.0.1 Łukasz Łuczak
   - sending sms message
   - receiving smsm message status
   - cancel sending sms
